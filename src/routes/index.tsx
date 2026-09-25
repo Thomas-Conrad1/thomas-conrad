@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Digital marketer driving results across paid media, email, and social: 16 ROAS on Amazon DSP, 18M+ campaign views, $700K+ revenue.",
+          "Digital marketer driving results across paid media, email, and social: 16 ROAS on Amazon DSP, 18M+ campaign views, $700K+ in ecommerce sales driven.",
       },
       { property: "og:title", content: "Thomas Conrad — Digital Marketing Portfolio" },
       {
@@ -28,7 +28,7 @@ const LINKEDIN = "https://www.linkedin.com/in/thomas-c-conrad";
 const stats = [
   { value: "16", label: "Amazon DSP ROAS" },
   { value: "18M+", label: "Campaign views" },
-  { value: "$700K+", label: "Shipped revenue" },
+  { value: "$700K+", label: "Ecommerce sales driven" },
   { value: "73M+", label: "Content views" },
 ];
 
@@ -57,10 +57,10 @@ const cases = [
     tag: "Founder · Vetro Gaming",
     title: "Building a Creator Brand",
     metric: "$700K+",
-    metricLabel: "Revenue",
+    metricLabel: "Ecommerce sales",
     challenge: "Grow a digital brand from zero and turn attention into revenue.",
     approach: "Ran content strategy, email, affiliate channels, and 17 brand deals with 7 global brands, leading a small contractor team.",
-    result: "200K followers, 73M+ views, 7,300+ email subscribers, and a YouTube Silver Play Button.",
+    result: "200K followers, 73M+ views, 7,300+ email subscribers, and a YouTube Silver Play Button — with $700K+ in ecommerce sales driven collectively across Vetro Gaming and other brands.",
     tags: ["Content", "Email", "Partnerships"],
   },
 ];
@@ -80,12 +80,12 @@ const experience = [
     ],
   },
   {
-    company: "Vetro Gaming LLC",
+    company: "Vetro Gaming",
     place: "Winston-Salem, NC",
     period: "May 2020 — Present",
     roles: "Founder",
     points: [
-      "$700K+ in shipped revenue through direct and affiliate channels",
+      "$700K+ in ecommerce sales driven collectively for Vetro Gaming and other brands, through direct and affiliate channels",
       "200K social followers and 73M+ views across channels",
       "Grew an email list from 0 to 7,300+ subscribers",
       "17 brand deals with 7 global brands; guest speaker and investor pitches",
@@ -117,6 +117,7 @@ function Index() {
         <div className="flex gap-6 text-xs font-medium uppercase tracking-widest md:gap-8 md:text-sm">
           <a href="#work" className="transition-colors hover:text-accent">Work</a>
           <a href="#experience" className="transition-colors hover:text-accent">Experience</a>
+          <a href="#toolkit" className="transition-colors hover:text-accent">Toolkit</a>
           <a href="#contact" className="transition-colors hover:text-accent">Contact</a>
         </div>
       </nav>
@@ -131,14 +132,12 @@ function Index() {
           </h1>
           <p className="mb-8 max-w-xl text-lg leading-relaxed text-foreground/70 md:text-xl">
             I'm a digital marketer who has run paid media, email, and social campaigns for agency clients — and built my own
-            creator brand to 200K followers and $700K+ in revenue. Now looking for a Digital Marketing Manager role.
+            creator brand to 200K followers while driving $700K+ in ecommerce sales across brands. Now looking for a
+            Digital Marketing Manager role.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#work" className="bg-primary px-8 py-4 font-medium text-primary-foreground transition-all hover:bg-accent hover:text-accent-foreground">
               View Case Studies
-            </a>
-            <a href={`mailto:${EMAIL}`} className="border border-foreground/20 px-8 py-4 font-medium transition-all hover:border-foreground">
-              Get in Touch
             </a>
           </div>
         </div>
