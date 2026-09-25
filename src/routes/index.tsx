@@ -223,38 +223,53 @@ function Index() {
         </div>
       </section>
 
-      <section id="toolkit" className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 py-24 md:px-8">
-          <h2 className="mb-16 font-serif text-5xl">Toolkit & Credentials</h2>
-          <div className="grid grid-cols-1 gap-14 md:grid-cols-12">
-            <div className="md:col-span-6">
-              <h3 className="mb-6 font-serif text-2xl">Toolkit</h3>
-              <div className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
-                {skills.map((s) => (
-                  <div key={s} className="border-b border-border pb-2">{s}</div>
-                ))}
+      <section id="toolkit" className="bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:px-8 md:py-28">
+          <div className="mb-16 md:mb-20">
+            <h2 className="font-serif text-5xl tracking-tight md:text-6xl">
+              Toolkit & <span className="text-accent">Credentials</span>
+            </h2>
+            <div className="mt-8 h-px w-full bg-primary-foreground/20" />
+          </div>
+
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-3 lg:gap-12">
+            <div className="space-y-8">
+              <h3 className="text-xs font-medium uppercase tracking-[0.25em] text-accent">Toolkit</h3>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+                <ul className="space-y-3 text-sm font-light leading-relaxed text-primary-foreground/85 md:text-base">
+                  {skills.slice(0, Math.ceil(skills.length / 2)).map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+                <ul className="space-y-3 text-sm font-light leading-relaxed text-primary-foreground/85 md:text-base">
+                  {skills.slice(Math.ceil(skills.length / 2)).map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div className="md:col-span-3">
-              <h3 className="mb-6 font-serif text-2xl">Certifications</h3>
-              <ul className="space-y-3 text-sm text-foreground/70">
-                <li className="border-b border-border pb-2">Google Analytics</li>
-                <li className="border-b border-border pb-2">Google Ads</li>
-                <li className="border-b border-border pb-2">HubSpot Content & Inbound</li>
+
+            <div className="space-y-8 border-t border-primary-foreground/15 pt-10 lg:border-t-0 lg:pt-0">
+              <h3 className="text-xs font-medium uppercase tracking-[0.25em] text-accent">Certifications</h3>
+              <ul className="space-y-5 font-serif text-xl italic leading-snug md:text-2xl">
+                <li>Google Analytics</li>
+                <li>Google Ads</li>
+                <li>HubSpot Content & Inbound</li>
               </ul>
             </div>
-            <div className="md:col-span-3">
-              <h3 className="mb-6 font-serif text-2xl">Education</h3>
-              <ul className="space-y-3 text-sm text-foreground/70">
-                <li className="border-b border-border pb-2">
-                  Master of Digital Marketing (4.0 GPA)
-                  <span className="mt-0.5 block text-foreground/50">Wake Forest University</span>
-                </li>
-                <li className="border-b border-border pb-2">
-                  B.A. Psychology
-                  <span className="mt-0.5 block text-foreground/50">Wake Forest University</span>
-                </li>
-              </ul>
+
+            <div className="space-y-8 border-t border-primary-foreground/15 pt-10 lg:border-t-0 lg:pt-0">
+              <h3 className="text-xs font-medium uppercase tracking-[0.25em] text-accent">Education</h3>
+              <div className="space-y-8">
+                <div>
+                  <p className="font-serif text-xl leading-snug md:text-2xl">Master of Digital Marketing</p>
+                  <p className="mt-2 text-sm font-light text-primary-foreground/80">4.0 GPA &bull; Wake Forest University</p>
+                </div>
+                <div>
+                  <p className="font-serif text-xl leading-snug md:text-2xl">B.A. Psychology</p>
+                  <p className="mt-2 text-sm font-light text-primary-foreground/80">Wake Forest University</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
