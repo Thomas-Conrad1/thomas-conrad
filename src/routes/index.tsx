@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Digital marketer driving results across paid media, email, and social: 16 ROAS on Amazon DSP, 18M+ campaign views, $700K+ revenue.",
+          "Digital marketer driving results across paid media, email, and social: 16 ROAS on Amazon DSP, 18M+ campaign views, $700K+ in ecommerce sales driven.",
       },
       { property: "og:title", content: "Thomas Conrad — Digital Marketing Portfolio" },
       {
@@ -28,7 +28,7 @@ const LINKEDIN = "https://www.linkedin.com/in/thomas-c-conrad";
 const stats = [
   { value: "16", label: "Amazon DSP ROAS" },
   { value: "18M+", label: "Campaign views" },
-  { value: "$700K+", label: "Shipped revenue" },
+  { value: "$700K+", label: "Ecommerce sales driven" },
   { value: "73M+", label: "Content views" },
 ];
 
@@ -57,10 +57,10 @@ const cases = [
     tag: "Founder · Vetro Gaming",
     title: "Building a Creator Brand",
     metric: "$700K+",
-    metricLabel: "Revenue",
+    metricLabel: "Ecommerce sales",
     challenge: "Grow a digital brand from zero and turn attention into revenue.",
     approach: "Ran content strategy, email, affiliate channels, and 17 brand deals with 7 global brands, leading a small contractor team.",
-    result: "200K followers, 73M+ views, 7,300+ email subscribers, and a YouTube Silver Play Button.",
+    result: "200K followers, 73M+ views, 7,300+ email subscribers, and a YouTube Silver Play Button — with $700K+ in ecommerce sales driven collectively across Vetro Gaming and other brands.",
     tags: ["Content", "Email", "Partnerships"],
   },
 ];
@@ -80,12 +80,12 @@ const experience = [
     ],
   },
   {
-    company: "Vetro Gaming LLC",
+    company: "Vetro Gaming",
     place: "Winston-Salem, NC",
     period: "May 2020 — Present",
     roles: "Founder",
     points: [
-      "$700K+ in shipped revenue through direct and affiliate channels",
+      "$700K+ in ecommerce sales driven collectively for Vetro Gaming and other brands, through direct and affiliate channels",
       "200K social followers and 73M+ views across channels",
       "Grew an email list from 0 to 7,300+ subscribers",
       "17 brand deals with 7 global brands; guest speaker and investor pitches",
@@ -117,6 +117,7 @@ function Index() {
         <div className="flex gap-6 text-xs font-medium uppercase tracking-widest md:gap-8 md:text-sm">
           <a href="#work" className="transition-colors hover:text-accent">Work</a>
           <a href="#experience" className="transition-colors hover:text-accent">Experience</a>
+          <a href="#toolkit" className="transition-colors hover:text-accent">Toolkit</a>
           <a href="#contact" className="transition-colors hover:text-accent">Contact</a>
         </div>
       </nav>
@@ -131,14 +132,12 @@ function Index() {
           </h1>
           <p className="mb-8 max-w-xl text-lg leading-relaxed text-foreground/70 md:text-xl">
             I'm a digital marketer who has run paid media, email, and social campaigns for agency clients — and built my own
-            creator brand to 200K followers and $700K+ in revenue. Now looking for a Digital Marketing Manager role.
+            creator brand to 200K followers while driving $700K+ in ecommerce sales across brands. Now looking for a
+            Digital Marketing Manager role.
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="#work" className="bg-primary px-8 py-4 font-medium text-primary-foreground transition-all hover:bg-accent hover:text-accent-foreground">
               View Case Studies
-            </a>
-            <a href={`mailto:${EMAIL}`} className="border border-foreground/20 px-8 py-4 font-medium transition-all hover:border-foreground">
-              Get in Touch
             </a>
           </div>
         </div>
@@ -224,32 +223,58 @@ function Index() {
         </div>
       </section>
 
+      <section id="toolkit" className="border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:px-8">
+          <h2 className="mb-16 font-serif text-5xl">Toolkit & Credentials</h2>
+          <div className="grid grid-cols-1 gap-14 md:grid-cols-12">
+            <div className="md:col-span-6">
+              <h3 className="mb-6 font-serif text-2xl">Toolkit</h3>
+              <div className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
+                {skills.map((s) => (
+                  <div key={s} className="border-b border-border pb-2">{s}</div>
+                ))}
+              </div>
+            </div>
+            <div className="md:col-span-3">
+              <h3 className="mb-6 font-serif text-2xl">Certifications</h3>
+              <ul className="space-y-3 text-sm text-foreground/70">
+                <li className="border-b border-border pb-2">Google Analytics</li>
+                <li className="border-b border-border pb-2">Google Ads</li>
+                <li className="border-b border-border pb-2">HubSpot Content & Inbound</li>
+              </ul>
+            </div>
+            <div className="md:col-span-3">
+              <h3 className="mb-6 font-serif text-2xl">Education</h3>
+              <ul className="space-y-3 text-sm text-foreground/70">
+                <li className="border-b border-border pb-2">
+                  Master of Digital Marketing (4.0 GPA)
+                  <span className="mt-0.5 block text-foreground/50">Wake Forest University</span>
+                </li>
+                <li className="border-b border-border pb-2">
+                  B.A. Psychology
+                  <span className="mt-0.5 block text-foreground/50">Wake Forest University</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer id="contact" className="bg-foreground py-20 text-background/60">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
-            <div>
-              <h4 className="mb-8 font-serif text-2xl text-background">Toolkit</h4>
-              <div className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
-                {skills.map((s) => (
-                  <div key={s} className="border-b border-background/10 pb-2">{s}</div>
-                ))}
-              </div>
-              <p className="mt-10 text-sm">
-                <span className="text-background">Certified:</span> Google Analytics · Google Ads · HubSpot Content & Inbound
-              </p>
-              <p className="mt-3 text-sm">
-                <span className="text-background">Education:</span> Master of Digital Marketing (4.0 GPA) and B.A. Psychology, Wake Forest University
-              </p>
-            </div>
             <div>
               <h4 className="mb-8 font-serif text-2xl text-background">Let's Connect</h4>
               <p className="mb-8">Open to Digital Marketing Manager roles where creativity and ROI go hand in hand.</p>
               <a href={`mailto:${EMAIL}`} className="font-serif text-2xl text-background underline decoration-accent underline-offset-8 transition-colors hover:text-accent md:text-3xl">
                 {EMAIL}
               </a>
-              <div className="mt-8 flex gap-6 text-sm uppercase tracking-widest">
+            </div>
+            <div className="flex flex-col items-start justify-end md:items-end">
+              <div className="flex gap-6 text-sm uppercase tracking-widest">
                 <a href={LINKEDIN} target="_blank" rel="noreferrer" className="hover:text-accent">LinkedIn</a>
-                <a href="tel:3364079070" className="hover:text-accent">336.407.9070</a>
+                <a href="#work" className="hover:text-accent">Work</a>
+                <a href="#experience" className="hover:text-accent">Experience</a>
               </div>
             </div>
           </div>
